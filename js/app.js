@@ -74,7 +74,9 @@ const displayPhnSpecs = (data) => {
   const phnDate = document.getElementById("phn-date");
   phnName.innerText = `Name: ${data.name}`;
   phnDesc.innerHTML = `<p>Specs: ${data.mainFeatures.sensors}</p>`;
-  phnDate.innerHTML = `<p>Release Date: ${data.releaseDate} </p>`;
+  phnDate.innerHTML = `<p>Release Date: ${
+    data.releaseDate ? data.releaseDate : "No Date Found"
+  } </p>`;
 };
 
 // btn function
